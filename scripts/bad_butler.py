@@ -1,11 +1,12 @@
 from libmproxy.protocol.http import decoded, HTTPResponse
 from netlib.odict import ODictCaseless
 from mimetypes import guess_type
+import os
 
 def start(context, argv):
     if len(argv) != 3:
         raise ValueError("Usage: -s \"%s filename_suffix path_to_bad_file\"" % argv[0])
-    context.filename_suffix, context.path_to_bad_file = argv[1], argv[2]
+    context.filename_suffix, context.path_to_bad_file = argv[1], os.path.expanduser(argv[2])
 
 def request(context, flow):
     if flow.request.path.endswith(context.filename_suffix):
