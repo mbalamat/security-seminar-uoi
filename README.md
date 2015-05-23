@@ -1,24 +1,6 @@
 HTTP is not secure
 ------------------
 
-- Introduction to HTTP
-    - HTTP was designed back when there was no need for encryption
-    - Everything uses HTTP
-    - (demo) Show Wireshark—everything is plaintext
-- (demo) Marios goes on a (possibly known like Facebook) website via HTTP and logs in while Kostis is MitMing him. Marios logs in with his password and I sniff it.
-    - What just happened? We'll show that we can sniff easily all HTTP traffic and alter it to our liking.
-- Introduction to HTTPS
-    - HTTP solves the problem of HTTP being plaintext
-    - Unfortunately it's not as widely adopted as we'd like
-    - Demonstrate that Facebook, Twitter, Gmail all use HTTPS
-- (demo) Marios normally logs in to Cronos and I sniff his password.
-    - Anyone can create an HTTPS certificate!
-    - HTTPS is useless if we get a warning and ignore it. The communication is encrypted but we don't know who we are communicating with.
-    - Example of a bad deployed certificate: webmail.cs.uoi.gr. C'mon guys.
-- (demo) Marios works on his laptop and downloads some software (eg. VLC).
-    - He doesn't verify the authenticity of the software he just downloaded and runs it. The VLC binary he's running has been altered by Kostis.
-- Ways to defend:
-    - HTTPS: Good examples are Chrome, Firefox, etc.
-    - Checksums
-    - Briefly: GPG
-- Further: Anyone can host a valid HTTPS site, should you trust any HTTPS site to download and run software from? NO!
+Η παρουσίαση έγινε στις 6 Μαρτίου 2015 στο Τμήμα Μηχανικών Υπολογιστών και Πληροφορικής του Πανεπιστημίου Ιωαννίνων. Σας ευχαριστούμε που μας παρακολουθήσατε.
+
+Σε αυτό το repository θα βρείτε [τις διαφάνειες](slides.pdf) της παρουσίασης, καθώς και [τα scripts](scripts/) που γράψαμε και χρησιμοποιήσαμε για τα demo. Τα scripts είναι γραμμένα για το [mitmproxy](https://mitmproxy.org/).
